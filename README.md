@@ -6,6 +6,6 @@ http://curl.haxx.se/
 
 This program compiled in Ubuntu Linux!
 
-To work with this program first of all replace ***<TOKEN>*** on top of Methods.cpp with you bot token.
+To work with this program first of all replace <TOKEN> on top of Methods.cpp with you bot token.
 
 Hope you enjoy it...
