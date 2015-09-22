@@ -12,10 +12,10 @@ namespace libCURL
 	    return written;
 	}
 	
-	CURL* init(char* URL, string FILENAME)
+	CURL* init(char* URL, string FILENAME, FILE* (&fp))
 	{
 	    CURL *curl;
-	    FILE *fp;
+	    
 	    CURLcode res;
 	    char *url = URL;
 	    string outfilename = FILENAME;
