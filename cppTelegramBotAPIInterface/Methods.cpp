@@ -2,8 +2,10 @@
 #include <string>
 #include <cstring>
 #include <iostream>
+#include "CURL.h"
 
 using namespace libCURL;
+using namespace std;
 
 namespace Methods
 {
