@@ -1,10 +1,7 @@
-#define METHODS_H
-#ifndef METHODS_H
-
-#include "CURL.h"
-
-#endif
 #include <curl/curl.h>
+#include <string>
+
+using namespace std;
 
 namespace Methods
 {	
