@@ -11,10 +11,8 @@ namespace Methods
 {
 	const string BOTAPI = "https://api.telegram.org/botTOKEN/";
 	
-	struct curl_httppost *formpost=NULL;
-	struct curl_httppost *lastptr=NULL;
-	struct curl_slist *headerlist=NULL;
-	static const char buf[] = "Expect:";
+	struct curl_httppost *formpost = NULL;
+	struct curl_httppost *lastptr = NULL;
 	
 	void getMe()
 	{
@@ -30,6 +28,8 @@ namespace Methods
 		
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void sendMessage(int chat_id, string text, bool disable_web_page_preview, int reply_to_message_id, string reply_markup)
@@ -53,6 +53,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void forwardMessage(int chat_id, int from_chat_id, int message_id)
@@ -72,6 +74,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void sendPhoto(int chat_id, string photo, string caption, int reply_to_message_id, string reply_markup)
@@ -93,6 +97,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void sendAudio(int chat_id, string audio, int duration, string performer, string title, int reply_to_message_id, string reply_markup)
@@ -116,6 +122,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void sendDocument(int chat_id, string document, int reply_to_message_id, string reply_markup)
@@ -136,6 +144,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void sendSticker(int chat_id, string sticker, int reply_to_message_id, string reply_markup)
@@ -156,6 +166,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void sendVideo(int chat_id, string video, int duration, string caption, int reply_to_message_id, string reply_markup)
@@ -178,6 +190,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void sendVoice(int chat_id, string voice, int duration, int reply_to_message_id, string reply_markup)	
@@ -199,6 +213,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void sendLocation(int chat_id, float latitude, float longitude, int reply_to_message_id, string reply_markup)
@@ -220,6 +236,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void sendChatAction(int chat_id, string action)
@@ -238,6 +256,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void getUserProfilePhotos(int user_id, int offset, int limit)
@@ -257,6 +277,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void getUpdates(int offset, int limit, int timeout)
@@ -276,6 +298,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void setWebhook(string url, string certificate)
@@ -295,6 +319,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 	void getFile(string file_id)
@@ -312,6 +338,8 @@ namespace Methods
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
 		curl_easy_perform(curl);
 	    curl_easy_cleanup(curl);
+		formpost = NULL;
+		lastptr = NULL;
 		fclose(fp);
 	}
 }
