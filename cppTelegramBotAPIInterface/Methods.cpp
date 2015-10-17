@@ -42,7 +42,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "sendMessage.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "text", CURLFORM_COPYCONTENTS, text.c_str(), CURLFORM_END);
@@ -66,7 +66,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "forwardMessage.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "from_chat_id", CURLFORM_COPYCONTENTS, to_string(from_chat_id).c_str(), CURLFORM_END);
@@ -87,7 +87,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "sendPhoto.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "photo", CURLFORM_FILE, photo.c_str(), CURLFORM_END);
@@ -110,7 +110,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "sendAudio.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "audio", CURLFORM_FILE, audio.c_str(), CURLFORM_END);
@@ -135,7 +135,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "sendDocument.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "document", CURLFORM_FILE, document.c_str(), CURLFORM_END);
@@ -157,7 +157,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "sendSticker.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "sticker", CURLFORM_FILE, sticker.c_str(), CURLFORM_END);
@@ -179,7 +179,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "sendVideo.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "video", CURLFORM_FILE, video.c_str(), CURLFORM_END);
@@ -203,7 +203,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "sendVoice.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "voice", CURLFORM_FILE, voice.c_str(), CURLFORM_END);
@@ -226,7 +226,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "sendLocation.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "latitude", CURLFORM_COPYCONTENTS, to_string(latitude).c_str(), CURLFORM_END);
@@ -249,7 +249,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "sendChatAction.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "chat_id", CURLFORM_COPYCONTENTS, to_string(chat_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "action", CURLFORM_COPYCONTENTS, action.c_str(), CURLFORM_END);
@@ -269,7 +269,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "getUserProfilePhotos.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "user_id", CURLFORM_COPYCONTENTS, to_string(user_id).c_str(), CURLFORM_END);
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "offset", CURLFORM_COPYCONTENTS, to_string(offset).c_str(), CURLFORM_END);
@@ -311,7 +311,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "setWebhook.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "url", CURLFORM_COPYCONTENTS, url.c_str(), CURLFORM_END);
 		if (certificate != "")
@@ -332,7 +332,7 @@ namespace Methods
 		c[sizeof(c) - 1] = 0;
 		
 		FILE *fp;
-		CURL *curl = init(c, "getMe.json", fp);
+		CURL *curl = init(c, "getFile.json", fp);
 		// ============ add fields =========== // 
 		curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "file_id", CURLFORM_COPYCONTENTS, file_id.c_str(), CURLFORM_END);
 		curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
