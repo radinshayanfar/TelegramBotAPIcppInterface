@@ -1,4 +1,4 @@
-# cppTelegramBotAPIInterface
+# TelegramBotAPIcppInterface
 An easy interface to work with telegram bot API with c++
 
 This program needs libCURL! So if you don't have it download it now!
