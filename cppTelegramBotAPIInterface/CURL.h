@@ -22,17 +22,10 @@ namespace libCURL
 	    curl = curl_easy_init();
 	    if (curl)
 	    {
-	        //curl_off_t max_speed = 1000 * 25;
-		    //curl_easy_setopt(curl, CURLOPT_MAX_RECV_SPEED_LARGE, max_speed);
 	        fp = fopen(outfilename.c_str(), "wb");
-	        curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
 	        curl_easy_setopt(curl, CURLOPT_URL, url);
 	        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
 	        curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
-	        //res = curl_easy_perform(curl);
-	        /* always cleanup */
-	        //curl_easy_cleanup(curl);
-	        //fclose(fp);
 	    }
 		return curl;
 	}
